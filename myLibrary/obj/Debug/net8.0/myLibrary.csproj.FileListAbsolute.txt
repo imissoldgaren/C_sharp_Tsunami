@@ -9,3 +9,4 @@ C:\Users\khale\OneDrive\Desktop\project\myLibrary\obj\Debug\net8.0\myLibrary.dll
 C:\Users\khale\OneDrive\Desktop\project\myLibrary\obj\Debug\net8.0\refint\myLibrary.dll
 C:\Users\khale\OneDrive\Desktop\project\myLibrary\obj\Debug\net8.0\myLibrary.pdb
 C:\Users\khale\OneDrive\Desktop\project\myLibrary\obj\Debug\net8.0\ref\myLibrary.dll
+C:\Users\khale\OneDrive\Desktop\project\myLibrary\obj\Debug\net8.0\myLibrary.sourcelink.json

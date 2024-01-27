@@ -148,12 +148,12 @@ namespace myLibrary
 
         public uint getGhostcellX(uint i_x, uint i_y)
         {
-            throw new NotImplementedException();
+            return 1;
         }
 
         public uint getGhostcellY(uint i_x, uint i_y)
         {
-            throw new NotImplementedException();
+            return 1;
         }
 
         public float[] getHeightValues()

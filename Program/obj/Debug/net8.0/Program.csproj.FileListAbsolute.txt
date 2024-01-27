@@ -16,3 +16,4 @@ C:\Users\khale\OneDrive\Desktop\project\Program\obj\Debug\net8.0\refint\Program.
 C:\Users\khale\OneDrive\Desktop\project\Program\obj\Debug\net8.0\Program.pdb
 C:\Users\khale\OneDrive\Desktop\project\Program\obj\Debug\net8.0\Program.genruntimeconfig.cache
 C:\Users\khale\OneDrive\Desktop\project\Program\obj\Debug\net8.0\ref\Program.dll
+C:\Users\khale\OneDrive\Desktop\project\Program\obj\Debug\net8.0\Program.sourcelink.json
