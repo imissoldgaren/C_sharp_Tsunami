@@ -1,0 +1,5 @@
+C:\Users\khale\OneDrive\Desktop\project\myLibrary\obj\Debug\netcoreapp3.0\myLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\khale\OneDrive\Desktop\project\myLibrary\obj\Debug\netcoreapp3.0\myLibrary.AssemblyInfoInputs.cache
+C:\Users\khale\OneDrive\Desktop\project\myLibrary\obj\Debug\netcoreapp3.0\myLibrary.AssemblyInfo.cs
+C:\Users\khale\OneDrive\Desktop\project\myLibrary\obj\Debug\netcoreapp3.0\myLibrary.csproj.CoreCompileInputs.cache
+C:\Users\khale\OneDrive\Desktop\project\myLibrary\obj\Debug\netcoreapp3.0\myLibrary.sourcelink.json

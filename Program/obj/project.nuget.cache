@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "35xq3wREfccu5V+f7s/RIBdCbrlY9v1VhD2HuMq2gOUUXjV6kMk9KeUgpbcHWx/QB1e+NNBelOntp/jzzQG4Yw==",
+  "dgSpecHash": "mk5ylwSsmefiJYwOCp1yvCYvZC/ppF4lSNdUgtqQX9WM0+8xYJEXnZlJAx4bTsfvuS+sCAltM15XdRYg/7C0Iw==",
   "success": true,
   "projectFilePath": "C:\\Users\\khale\\OneDrive\\Desktop\\project\\Program\\Program.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\khale\\.nuget\\packages\\hdf.pinvoke.1.10\\1.10.612\\hdf.pinvoke.1.10.1.10.612.nupkg.sha512"
+  ],
   "logs": []
 }

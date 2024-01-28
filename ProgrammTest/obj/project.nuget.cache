@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "I9WglJQjePu+dZZn/IJAjSm9+vbj7QhwBKOC0jsASgBnoSoXOIeK5SW/FWNZXMoL6HDh+fbwk5UGzPfT/UwOxA==",
+  "dgSpecHash": "8M7BYCEiey7Yf6unMXO/tFRqjvzqikbtwed1VLr+JFvdqYy2DzCZ0WveIvrkkN0U/wtjOfsusJ60u7tKkNa1YQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\khale\\OneDrive\\Desktop\\project\\ProgrammTest\\ProgrammTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\khale\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
+    "C:\\Users\\khale\\.nuget\\packages\\hdf.pinvoke.1.10\\1.10.612\\hdf.pinvoke.1.10.1.10.612.nupkg.sha512",
     "C:\\Users\\khale\\.nuget\\packages\\microsoft.codecoverage\\17.6.0\\microsoft.codecoverage.17.6.0.nupkg.sha512",
     "C:\\Users\\khale\\.nuget\\packages\\microsoft.net.test.sdk\\17.6.0\\microsoft.net.test.sdk.17.6.0.nupkg.sha512",
     "C:\\Users\\khale\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.6.0\\microsoft.testplatform.objectmodel.17.6.0.nupkg.sha512",

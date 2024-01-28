@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tiUvTx9ZMqzqMUlM5yz6cEJPXAJoaSAtO/L4VvHN0v1wulKhd4FoW45eugFAnRTCeL9M+F3VIKS1ukp8emcgoA==",
+  "dgSpecHash": "H0QnX+v2qyaNDDiSUVxsmy2ScNEMtS5du5pdWr1hT3MMPfWe0yhK93qxdEGTOnrU4h4OEwvJxzQ60pAcejUCcg==",
   "success": true,
   "projectFilePath": "C:\\Users\\khale\\OneDrive\\Desktop\\project\\myLibrary\\myLibrary.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\khale\\.nuget\\packages\\hdf.pinvoke.1.10\\1.10.612\\hdf.pinvoke.1.10.1.10.612.nupkg.sha512"
+  ],
   "logs": []
 }

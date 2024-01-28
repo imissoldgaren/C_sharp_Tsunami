@@ -2,10 +2,19 @@
 
 using System.Globalization;
 using myLibrary;
+using System;
+using HDF;
+using HDF.PInvoke;
+using System.Text;
+
+
+
 
 class Program
 {
     
+
+     
 
     public static void Main(string[] args) {
 
@@ -51,7 +60,6 @@ class Program
 
                 float l_h = setup.GetHeight(l_x, l_y);
                 float l_hu = setup.GetMomentumX(l_x, l_y);
-                //float l_hv = setup.GetMomentumY(l_x, l_y);
                 float l_bv = setup.GetBathymetry(l_x, l_y);
 
                 l_hMax = Math.Max(l_h, l_hMax);
