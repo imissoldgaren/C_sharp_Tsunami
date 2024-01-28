@@ -12,11 +12,73 @@ using System.Text;
 
 class Program
 {
+
+      public static void CreateHdf5File(int size, nint constantValue, string filename)
+        {
+            long ncId, err;
+         const string VarIdX = "x";
+         const string VarIdY = "y";
+
+            // Create a new HDF5 file
+            ncId = H5F.create(filename, H5F.ACC_TRUNC);
+            if (ncId < 0)
+            {
+                Console.WriteLine("Error creating file: " + filename);
+                return;
+            }
+
+            // Create and write X dataset
+            CreateConstantDataset(ncId, VarIdX, size, constantValue);
+
+            // Create and write Y dataset
+            CreateConstantDataset(ncId, VarIdY, size, constantValue);
+
+            // Close the file
+            err = H5F.close(ncId);
+            if (err < 0)
+            {
+                Console.WriteLine("Error closing file: " + filename);
+            }
+        }
+
+        private static void CreateConstantDataset(long ncId, string varId, int size, nint constantValue)
+        {
+            nint[] data = new nint[size];
+            for (int i = 0; i < size; i++)
+            {
+                data[i] = constantValue;
+            }
+
+            // Create the dataset
+            var dataspaceId = H5S.create_simple(1, new ulong[] { (ulong)data.Length }, null);
+            var datasetId = H5D.create(ncId, varId, H5T.NATIVE_DOUBLE, dataspaceId);
+
+            // Write data to the dataset
+            H5D.write(datasetId, H5T.NATIVE_DOUBLE, dataspaceId, dataspaceId, H5P.DEFAULT, data[0]);
+
+            // Close resources
+            H5D.close(datasetId);
+            H5S.close(dataspaceId);
+        }
     
 
-     
+      static void Main()
+    {
+        // Example input values
+     int size = 100;
+            nint constantValue = 42;
 
-    public static void Main(string[] args) {
+            // Output HDF5 filename
+            string filename = "output.h5";
+
+            // Call the function to create the HDF5 file
+            CreateHdf5File(size, constantValue, filename);
+
+            Console.WriteLine("HDF5 file created successfully: " + filename);
+        }
+    }
+
+   /* public static void Main(string[] args) {
 
         float l_hl = 10;
         float l_hr = 5;
@@ -101,7 +163,7 @@ class Program
                 l_timeStep++;
                 l_simTime += l_dt;
             }
-        }
+        }*/
 
-}
+
 

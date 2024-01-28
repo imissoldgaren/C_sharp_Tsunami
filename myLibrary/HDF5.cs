@@ -71,9 +71,73 @@ namespace myLibrary
             Console.WriteLine("An error occurred: " + ex.Message);
         }
     }
-
     
 
-    
+
+        private const string VarIdX = "x";
+        private const string VarIdY = "y";
+        private const string VarIdBathymetry = "bathymetry";
+
+        public static void FillConstants(int nx, int ny, int stride, double dxy, double domainStartX, double domainStartY, int[] b, string filename)
+        {
+            long ncId, err;
+
+            // Create a new HDF5 file
+            ncId = H5F.create(filename, H5F.ACC_TRUNC);
+            if (ncId < 0)
+            {
+                Console.WriteLine("Error creating file: " + filename);
+                return;
+            }
+
+            // Create x and y coordinates datasets
+            CreateCoordinateDataset(ncId, VarIdX, nx, dxy, domainStartX);
+            CreateCoordinateDataset(ncId, VarIdY, ny, dxy, domainStartY);
+
+            // Create and write bathymetry dataset
+            CreateBathymetryDataset(ncId, VarIdBathymetry, b, nx, ny, stride);
+
+            // Close the file
+            err = H5F.close(ncId);
+            if (err < 0)
+            {
+                Console.WriteLine("Error closing file: " + filename);
+            }
+        }
+
+       private static void CreateCoordinateDataset(long ncId, string varId, int size, double dxy, double domainStart)
+{
+    int[] coordinateData = new int[size ];
+
+    for (int i = 0; i < size ; i++)
+    {
+        coordinateData[i] = (int)(((i + 0.5) * dxy ) + domainStart);
+    }
+
+    // Create the dataset
+    var dataspaceId = H5S.create_simple(1, new ulong[] { (ulong)coordinateData.Length }, null);
+    var datasetId = H5D.create(ncId, varId, H5T.NATIVE_INT, dataspaceId);
+
+    // Write data to the dataset
+    H5D.write(datasetId, H5T.NATIVE_INT, dataspaceId, dataspaceId, H5P.DEFAULT, coordinateData[0]);
+
+    // Close resources
+    H5D.close(datasetId);
+    H5S.close(dataspaceId);
+}
+
+        private static void CreateBathymetryDataset(long ncId, string varId, int[] b, int nx, int ny, int stride)
+        {
+            // Create the dataset
+            var dataspaceId = H5S.create_simple(2, new ulong[] { (ulong)(nx ), (ulong)(ny ) }, null);
+            var datasetId = H5D.create(ncId, varId, H5T.NATIVE_INT, dataspaceId);
+
+            // Write data to the dataset
+            H5D.write(datasetId, H5T.NATIVE_INT, dataspaceId, dataspaceId, H5P.DEFAULT, b[0]);
+
+            // Close resources
+            H5D.close(datasetId);
+            H5S.close(dataspaceId);
+        }
     }
 }
